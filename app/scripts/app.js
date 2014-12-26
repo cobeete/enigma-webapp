@@ -23,6 +23,14 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/enigmaList', {
+        templateUrl: 'views/enigmaList.html',
+        controller: 'EnigmaListCtrl'
+      })
+      .when('/newEnigma', {
+        templateUrl: 'views/newEnigma.html',
+        controller: 'NewEnigmaCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
