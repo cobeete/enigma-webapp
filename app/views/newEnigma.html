@@ -1,2 +1,20 @@
-<button>This is the new enigma view {{name}}.</button>
-<input ng-model="name"></input>
+<ul ng-repeat="enigma in enigmaList">
+    <li>
+    	<div>{{enigma.name}} - {{enigma.author}}</div>
+    	<div>{{enigma.imageUrl}}</div>
+    </li>
+</ul>
+<div class="form-group">
+    <label>Nombre:</label>
+    <input ng-model="newEnigma.name" class="form-control" placeholder="Name"></input>
+</div>
+<div class="form-group">
+    <label>Autor:</label>
+    <input ng-model="newEnigma.author" class="form-control" placeholder="Author"></input>
+</div>
+<div class="form-group">
+	<input fileread="newEnigma.file" type="file" id="file" accept="image/*" multiple></input>
+</div>
+<div class="form-group">
+    <button ng-click="Save()" ng-disabled="IsSaveDisabled()" type="submit" class="btn btn-default">Save</button>
+</div>
